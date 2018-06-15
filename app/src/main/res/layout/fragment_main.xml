@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.matthijs.thecircleapp.MainFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:background="@android:color/background_dark"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pov" />
+
+        <android.opengl.GLSurfaceView
+            android:alpha=".3"
+            android:id="@+id/cameraPreview_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/transparent_cover"
+            android:background="#77000000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/messages"
+                android:layout_above="@id/actionbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay"/>
+            <LinearLayout
+                android:background="#ff000000"
+                android:alpha="0.8"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/actionbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_gravity="bottom">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+                    <ImageButton
+                        android:id="@+id/cameraBtn"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:src="@drawable/circle"
+                        />
+                </LinearLayout>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:visibility="gone"
+                android:alpha="0.8"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/animLayout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_gravity="bottom">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_weight="1"/>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/btn_animation_view"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_fileName="snap_loader_white.json"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_weight="1"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>
