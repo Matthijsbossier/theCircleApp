@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
     <uses-feature android:glEsVersion="0x00020000"
         android:required="true"/>
 
@@ -31,6 +30,10 @@
             android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
+
+        <activity android:name="com.example.matthijs.thecircleapp.liveVideoBroadcaster.LiveVideoBroadcasterActivity"
+            android:theme="@style/AppTheme"/>
+
     </application>
 
 </manifest>

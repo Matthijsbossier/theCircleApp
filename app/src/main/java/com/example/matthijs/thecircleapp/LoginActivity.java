@@ -3,6 +3,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,12 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.matthijs.thecircleapp.liveVideoBroadcaster.LiveVideoBroadcasterActivity;
 import com.github.nkzawa.socketio.androidchat.R;
 
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.Console;
 
 
 /**
@@ -62,6 +66,17 @@ public class LoginActivity extends Activity {
             }
         });
 
+        Button user1Button = (Button) findViewById(R.id.user1_button);
+        user1Button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent myIntent = new Intent(LoginActivity.this, LiveVideoBroadcasterActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                LoginActivity.this.startActivity(myIntent);
+            }
+        });
+
+
         mSocket.on("login", onLogin);
     }
 
@@ -106,6 +121,7 @@ public class LoginActivity extends Activity {
 
         // perform the user login attempt.
         mSocket.emit("add user", username);
+
     }
 
     private Emitter.Listener onLogin = new Emitter.Listener() {

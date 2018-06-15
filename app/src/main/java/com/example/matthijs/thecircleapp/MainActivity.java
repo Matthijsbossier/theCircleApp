@@ -10,7 +10,7 @@ import com.github.nkzawa.socketio.androidchat.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String RTMP_BASE_URL = "rtmp://188.166.29.146/live";
+    public static final String RTMP_BASE_URL = "rtmp://188.166.29.146/live/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
