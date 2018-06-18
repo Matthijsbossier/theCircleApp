@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.github.nkzawa.socketio.androidchat.R;
+//import com.github.nkzawa.socketio.androidchat.R;
+
+import com.example.matthijs.thecircleapp.liveVideoBroadcaster.R;
 
 import java.util.List;
 

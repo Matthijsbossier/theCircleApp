@@ -13,7 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.matthijs.thecircleapp.liveVideoBroadcaster.LiveVideoBroadcasterActivity;
-import com.github.nkzawa.socketio.androidchat.R;
+import com.example.matthijs.thecircleapp.liveVideoBroadcaster.R;
+//import com.github.nkzawa.socketio.androidchat.R;
 
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;

@@ -15,7 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.nkzawa.socketio.androidchat.R;
+//import com.github.nkzawa.socketio.androidchat.R;
+import com.example.matthijs.thecircleapp.liveVideoBroadcaster.R;
 import com.google.android.exoplayer2.BuildConfig;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;

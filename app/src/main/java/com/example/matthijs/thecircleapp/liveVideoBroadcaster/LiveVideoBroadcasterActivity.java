@@ -31,7 +31,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.github.nkzawa.socketio.androidchat.R;
+//import com.github.nkzawa.socketio.androidchat.R;
 
 import java.util.ArrayList;
 import java.util.Timer;

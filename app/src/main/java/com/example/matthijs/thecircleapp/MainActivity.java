@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.matthijs.thecircleapp.liveVideoBroadcaster.LiveVideoBroadcasterActivity;
+import com.example.matthijs.thecircleapp.liveVideoBroadcaster.R;
 import com.example.matthijs.thecircleapp.liveVideoPlayer.LiveVideoPlayerActivity;
-import com.github.nkzawa.socketio.androidchat.R;
+//import com.github.nkzawa.socketio.androidchat.R;
 
 public class MainActivity extends AppCompatActivity {
 

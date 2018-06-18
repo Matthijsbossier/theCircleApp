@@ -13,7 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.github.nkzawa.socketio.androidchat.R;
+//import com.github.nkzawa.socketio.androidchat.R;
 
 import java.util.ArrayList;
 

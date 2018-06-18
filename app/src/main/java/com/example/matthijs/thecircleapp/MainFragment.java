@@ -28,7 +28,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.github.nkzawa.socketio.androidchat.R;
+import com.example.matthijs.thecircleapp.liveVideoBroadcaster.R;
+//import com.github.nkzawa.socketio.androidchat.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
