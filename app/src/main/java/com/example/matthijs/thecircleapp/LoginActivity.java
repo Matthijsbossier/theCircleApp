@@ -45,8 +45,8 @@ public class LoginActivity extends Activity {
         mSocket = app.getSocket();
 
         // Set up the login form.
-        mUsernameView = (EditText) findViewById(R.id.username_input);
-        mPasswordView = (EditText) findViewById(R.id.password_input);
+        //mUsernameView = (EditText) findViewById(R.id.username_input);
+        //mPasswordView = (EditText) findViewById(R.id.password_input);
 //        mUsernameView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 //            @Override
 //            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -58,16 +58,47 @@ public class LoginActivity extends Activity {
 //            }
 //        });
 
-        Button signInButton = (Button) findViewById(R.id.sign_in_button);
-        signInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
+//        Button signInButton = (Button) findViewById(R.id.sign_in_button);
+//        signInButton.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                attemptLogin();
+//            }
+//        });
 
         Button user1Button = (Button) findViewById(R.id.user1_button);
         user1Button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent myIntent = new Intent(LoginActivity.this, LiveVideoBroadcasterActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                LoginActivity.this.startActivity(myIntent);
+            }
+        });
+
+
+        Button user2Button = (Button) findViewById(R.id.user2_button);
+        user2Button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent myIntent = new Intent(LoginActivity.this, LiveVideoBroadcasterActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                LoginActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button user3Button = (Button) findViewById(R.id.user3_button);
+        user3Button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent myIntent = new Intent(LoginActivity.this, LiveVideoBroadcasterActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                LoginActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button user4Button = (Button) findViewById(R.id.user4_button);
+        user4Button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view){
                 Intent myIntent = new Intent(LoginActivity.this, LiveVideoBroadcasterActivity.class);

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.matthijs.thecircleapp.liveVideoBroadcaster.LiveVideoBroadcasterActivity;
+import com.example.matthijs.thecircleapp.liveVideoPlayer.LiveVideoPlayerActivity;
 import com.github.nkzawa.socketio.androidchat.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openVideoBroadcaster(View view) {
         Intent i = new Intent(this, LiveVideoBroadcasterActivity.class);
+        startActivity(i);
+    }
+
+    public void openVideoPlayer(View view) {
+        Intent i = new Intent(this, LiveVideoPlayerActivity.class);
         startActivity(i);
     }
 }

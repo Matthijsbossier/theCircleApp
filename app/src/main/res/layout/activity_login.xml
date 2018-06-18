@@ -16,41 +16,41 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/username_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_username"
-            android:imeActionId="@+id/login"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionUnspecified"
-            android:inputType="textPersonName"
-            android:maxLength="14"
-            android:maxLines="1"
-            android:singleLine="true"
-            tools:ignore="InvalidImeActionId" />
-        <EditText
-            android:id="@+id/password_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_password"
-            android:imeActionId="@+id/login"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionUnspecified"
-            android:inputType="textPassword"
-            android:maxLength="14"
-            android:maxLines="1"
-            android:singleLine="true"
-            tools:ignore="InvalidImeActionId" />
-        <Button
-            android:id="@+id/sign_in_button"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/action_sign_in"
-            android:textStyle="bold"
-            />
+        <!--<EditText-->
+            <!--android:id="@+id/username_input"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/prompt_username"-->
+            <!--android:imeActionId="@+id/login"-->
+            <!--android:imeActionLabel="@string/action_sign_in_short"-->
+            <!--android:imeOptions="actionUnspecified"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:maxLength="14"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true"-->
+            <!--tools:ignore="InvalidImeActionId" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/password_input"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/prompt_password"-->
+            <!--android:imeActionId="@+id/login"-->
+            <!--android:imeActionLabel="@string/action_sign_in_short"-->
+            <!--android:imeOptions="actionUnspecified"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:maxLength="14"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true"-->
+            <!--tools:ignore="InvalidImeActionId" />-->
+        <!--<Button-->
+            <!--android:id="@+id/sign_in_button"-->
+            <!--style="?android:textAppearanceSmall"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:text="@string/action_sign_in"-->
+            <!--android:textStyle="bold"-->
+            <!--/>-->
 
         <Button
             android:id="@+id/user1_button"
@@ -61,5 +61,36 @@
             android:text="@string/username_1"
             android:textStyle="bold"
             />
+
+        <Button
+            android:id="@+id/user2_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/username_2"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/user3_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/username_3"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/user4_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/username_4"
+            android:textStyle="bold"
+            />
+
     </LinearLayout>
 </ScrollView>
