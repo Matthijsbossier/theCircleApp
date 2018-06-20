@@ -10,11 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthijs.thecircleapp.LoginActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical">
+
+
 
         <!--<EditText-->
             <!--android:id="@+id/username_input"-->
@@ -92,5 +96,25 @@
             android:textStyle="bold"
             />
 
+        <Button
+            android:id="@+id/user5_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/username_5"
+            android:textStyle="bold"
+            />
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:alpha=".3"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/pov"/>-->
+
     </LinearLayout>
+
+
+
 </ScrollView>

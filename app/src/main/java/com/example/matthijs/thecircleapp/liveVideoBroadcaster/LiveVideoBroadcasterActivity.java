@@ -28,10 +28,13 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 //import com.github.nkzawa.socketio.androidchat.R;
+
+import com.example.matthijs.thecircleapp.MainFragment;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -60,6 +63,27 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
     private ILiveVideoBroadcaster mLiveVideoBroadcaster;
     private Button mBroadcastControlButton;
 
+
+    // MainFragment privates
+//    private static final String TAG = "MainFragment";
+//    private static final int REQUEST_LOGIN = 0;
+//    private static final int TYPING_TIMER_LENGTH = 600;
+//    private RecyclerView mMessagesView;
+//    private EditText mInputMessageView;
+//    private List<com.example.matthijs.thecircleapp.Message> mMessages = new ArrayList<com.example.matthijs.thecircleapp.Message>();
+//    private RecyclerView.Adapter mAdapter;
+//    private boolean mTyping = false;
+//    private Handler mTypingHandler = new Handler();
+//    private String mUsername;
+//    private Socket mSocket;
+//    private LottieAnimationView btnAnimationView;
+//    private ImageButton cameraBtn;
+//    private LinearLayout animLayout;
+//    private Boolean isConnected = true;
+
+    //private MainFragment mainFragment;
+    private static final int CONTENT_VIEW_ID = 10101010;
+
     /** Defines callbacks for service binding, passed to bindService() */
     private ServiceConnection mConnection = new ServiceConnection() {
 
@@ -86,6 +110,7 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        String username = getIntent().getExtras().getString("user");
         // Hide title
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -96,10 +121,19 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
         //this makes service do its job until done
         startService(mLiveVideoBroadcasterServiceIntent);
 
+
         setContentView(R.layout.activity_live_video_broadcaster);
+//        View v = findViewById(R.id.messages);
+//        v.bringToFront();
+        //        setContentView(R.layout.fragment_main);
+//
+//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.replace(R.id.fragment_framelayout, new MainFragment());
+//        ft.commit();
 
         mTimerHandler = new TimerHandler();
         mStreamNameEditText = (EditText) findViewById(R.id.stream_name_edit_text);
+        mStreamNameEditText.setText(username);
 
         mRootView = (ViewGroup)findViewById(R.id.root_layout);
         mSettingsButton = (ImageButton)findViewById(R.id.settings_button);
@@ -202,6 +236,7 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
 
     }
 
+
     public void showSetResolutionDialog(View v) {
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -255,7 +290,7 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
                             if (result) {
                                 mStreamLiveStatus.setVisibility(View.VISIBLE);
 
-                                mBroadcastControlButton.setText(R.string.stop_broadcasting);
+                                //mBroadcastControlButton.setText(R.string.stop_broadcasting);
                                 mSettingsButton.setVisibility(View.GONE);
                                 startTimer();//start the recording duration
                             }
@@ -285,7 +320,7 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
 
     public void triggerStopRecording() {
         if (mIsRecording) {
-            mBroadcastControlButton.setText(R.string.start_broadcasting);
+            //mBroadcastControlButton.setText(R.string.start_broadcasting);
 
             mStreamLiveStatus.setVisibility(View.GONE);
             mStreamLiveStatus.setText(R.string.live_indicator);
@@ -380,5 +415,10 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
 
         return String.valueOf(number);
     }
+
+
+
+
+
 }
 
