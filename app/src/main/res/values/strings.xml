@@ -20,7 +20,7 @@
     <string name="user_action_typing">is typing</string>
 
     <string name="live_indicator">on-air</string>
-    <string name="start_broadcasting">Start Broadcasting</string>
+    <string name="start_broadcasting">Start/Stop Streaming</string>
     <string name="stream_name">Stream Name</string>
     <string name="nocamera">No camera exists in your device</string>
     <string name="camera_not_running_properly">Camera is not running properly</string>

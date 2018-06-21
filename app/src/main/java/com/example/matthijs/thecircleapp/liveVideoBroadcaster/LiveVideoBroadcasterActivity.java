@@ -134,6 +134,8 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
         mTimerHandler = new TimerHandler();
         mStreamNameEditText = (EditText) findViewById(R.id.stream_name_edit_text);
         mStreamNameEditText.setText(username);
+        //maak hem read only
+        mStreamNameEditText.setEnabled(false);
 
         mRootView = (ViewGroup)findViewById(R.id.root_layout);
         mSettingsButton = (ImageButton)findViewById(R.id.settings_button);

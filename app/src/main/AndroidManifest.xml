@@ -29,7 +29,7 @@
             android:name="com.example.matthijs.thecircleapp.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.AppCompat"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+            android:windowSoftInputMode="stateHidden" >
         </activity>
 
         <activity android:name="com.example.matthijs.thecircleapp.liveVideoBroadcaster.LiveVideoBroadcasterActivity"
