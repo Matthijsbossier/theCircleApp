@@ -34,7 +34,7 @@ import android.widget.TextView;
 
 //import com.github.nkzawa.socketio.androidchat.R;
 
-import com.example.matthijs.thecircleapp.MainFragment;
+//import com.example.matthijs.thecircleapp.MainFragment;
 
 import java.util.ArrayList;
 import java.util.Timer;

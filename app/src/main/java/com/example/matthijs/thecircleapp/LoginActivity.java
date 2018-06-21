@@ -17,10 +17,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.example.matthijs.thecircleapp.liveVideoBroadcaster.LiveVideoBroadcasterActivity;
 import com.example.matthijs.thecircleapp.liveVideoBroadcaster.R;
-//import com.github.nkzawa.socketio.androidchat.R;
 
-import io.socket.client.Socket;
-import io.socket.emitter.Emitter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -46,7 +43,6 @@ public class LoginActivity extends Activity {
     private String mUsername;
     private String mPassword;
 
-    private Socket mSocket;
 
 
 
@@ -55,9 +51,6 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        ChatApplication app = (ChatApplication) getApplication();
-        mSocket = app.getSocket();
 
         // Set up the login form.
         //mUsernameView = (EditText) findViewById(R.id.username_input);
@@ -150,14 +143,14 @@ public class LoginActivity extends Activity {
         });
 
 
-        mSocket.on("login", onLogin);
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
-        mSocket.off("login", onLogin);
+
     }
 
     /**
@@ -192,30 +185,10 @@ public class LoginActivity extends Activity {
         mUsername = username;
         mPassword = password;
 
-        // perform the user login attempt.
-        mSocket.emit("add user", username);
 
     }
 
-    private Emitter.Listener onLogin = new Emitter.Listener() {
-        @Override
-        public void call(Object... args) {
-            JSONObject data = (JSONObject) args[0];
 
-            int numUsers;
-            try {
-                numUsers = data.getInt("numUsers");
-            } catch (JSONException e) {
-                return;
-            }
-
-            Intent intent = new Intent();
-            intent.putExtra("username", mUsername);
-            intent.putExtra("numUsers", numUsers);
-            setResult(RESULT_OK, intent);
-            finish();
-        }
-    };
 
     public void postApiCall(String email, String sign) {
         try {
